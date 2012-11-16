@@ -1,0 +1,151 @@
+■最初の設定
+$ git config --list
+$ git config --global --list
+
+$ git config --global user.name=yatemmma
+$ git config --global user.email=yatemmma@gmail.com
+
+$ git config --global color.ui "auto"
+
+
+■
+$ git status
+
+作業ツリー/作業スペース
+ステージング・エリア
+リポジトリ
+
+yashima@LASSIC45 /c/y/github/study_git (master)
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   index.html
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yashima@LASSIC45 /c/y/github/study_git (master)
+$ git add index.html
+
+yashima@LASSIC45 /c/y/github/study_git (master)
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   index.html
+#
+
+yashima@LASSIC45 /c/y/github/study_git (master)
+
+
+$ git commit -m "comment1." \
+-m "comment2."
+
+
+$ git log -1
+
+■ブランチ
+$ git branch test1 master
+
+$ git rebase test1
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to test1.
+
+$ git branch -d test1
+
+$ git log --pretty=oneline
+
+$ git archive
+
+$ git add -i
+
+
+
+hunk　ハンク
+
+
+git status
+
+git diff ⇒ステージングエリアと作業ツリーの差分
+git diff --cached ⇒ステージングエリアとリポジトリ
+git diff HEAD ⇒作業ツリーとリポジトリ
+
+
+git mv index.html test.html
+
+
+
+.gitignore
+
+.git/info/exclude 
+
+
+git branch -m master master2
+
+
+
+git branch -b ⇒チェックアウトも同時
+
+■マージ
+・直接マージ
+・圧縮コミット
+・チェリーピック(つまみ食い
+
+
+git checkout master
+git merge test1
+
+git merge --squash test1
+
+git cherry-pick 3d3ised
+git cherry-pick -n 3d3ised
+
+
+
+
+git mergetool
+
+
+git branch -d xxx
+git branch -D xxx
+git branch -m xxx xxx2
+
+
+
+■履歴
+
+git log
+
+git log {hash} // そこから
+
+git log --since="5 hours" // 5時間以内
+git log --before="5 hours" -1 // 5時間前以前
+
+git log {hash}..{hash2} // 2は含まない
+
+
+git diff --stat 
+
+
+git blame
+
+
+git commit -C HEAD --amend -a
+
+git commit --amend // コミットログ変えられる
+
+
+git revert -n HEAD
+
+git reset --soft HEAD^ // ステージングエリアに戻す
+git reset --hard HEAD^
+
+
+git rebase -i HEAD~3  // コミット順入れ替え
+--------------------------------
+
+git add を取り消す
+git tag を取り消す
