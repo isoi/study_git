@@ -32,3 +32,7 @@
   * ユーザ情報設定
      * $ git config --global user.name "名前"
      * $ git config --global user.email "メールアドレス"
+  * ソースコードをチェックアウト
+     * $ git clone https://github.com/yatemmma/study_git.git
+     * $ cd study_git
+
