@@ -5,11 +5,11 @@
 #### 事前準備
 
 * Gitクライアントソフトのインストール
-  * Windows(1) msysgit
+  * Windows(1) msysgitの場合
      * http://code.google.com/p/msysgit/
      * Git-1.7.11-preview20120710.exe
      * git bashというやつを起動
-  * Windows(2) cygwin
+  * Windows(2) cygwinの場合
      * http://www.cygwin.com/
      * cygwin入れたらLinuxと一緒
   * Mac
@@ -23,4 +23,12 @@
      * http://blog.glasses-factory.net/2011/08/16/github
      * study_gitのCollaboratorsに追加する
 
-### test
+* 初期設定
+  * フォルダ作成
+     * 任意の場所にフォルダ作成
+     * 作成したフォルダに移動する
+  * 初期化処理
+     * $ git init
+  * ユーザ情報設定
+     * $ git config --global user.name "名前"
+     * $ git config --global user.email "メールアドレス"
