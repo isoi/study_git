@@ -1,0 +1,57 @@
+### コマンドメモ
+
+$ git config // .git/config
+$ git conig --global // ~/.gitconfig
+
+
+* (リモートリポジトリ)
+* ローカルリポジトリ
+* インデックス
+* ワーキングツリー
+
+Tracked
+Untracked
+
+
+$ git add
+$ git add filename.txt
+$ git add dirname
+$ git add .
+$ git add --all
+
+$ git rm --cached filename.txt
+$ git rm -r --cached dirname
+$ git reset HEAD filename.txt
+$ git checkout -- filename.txt
+
+$ git status
+
+HEAD
+
+
+
+$ git diff # ワーキングツリーとインデックスの差分
+$ git diff filename
+$ git diff dirname
+$ git diff ハッシュ値 ハッシュ値
+
+$ git diff --cached # インデックスとローカルリポジトリ
+$ git diff HEAD # ワーキングツリーとローカルリポジトリ
+
+
+
+$ git log
+$ git log ハッシュ値..ハッシュ値
+$ git log ハッシュ値..
+$ git log ..ハッシュ値 # HEAD..ハッシュ値
+$ git log -p
+$ git log -3
+$ git log -1 ハッシュ値 # ハッシュ値からN個のログを表示
+$ git log --oneline
+
+
+$ git commit 
+$ git commit -a
+$ git commit filename.txt
+$ git commit --amend
+$ git commit --amend # ファイルを修正してaddしてから。直前のコミットやり直し
